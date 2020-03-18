@@ -7,7 +7,8 @@ namespace TabPageColoring
    public partial class Form1 : Form
    {
 
-      Dictionary<int, Color>     TabColors = new Dictionary<int, Color>();
+      Color                      defaultColor   = Color.Transparent;
+      Dictionary<int, Color>     TabColors      = new Dictionary<int, Color>();
 
       /// <summary>
       /// An example of setting the color of a TabPage in a WinForms TabControl.
@@ -44,7 +45,7 @@ namespace TabPageColoring
       private void cmdToggleTabPageColor_Click(object sender, System.EventArgs e)
       {
          int   myIndex  = -1;
-         Color newColor = Color.Transparent;
+         Color newColor = defaultColor;
          switch(((Button)sender).Name)
          {
             case "cmdToggleTabPage1Color":   myIndex = 0; newColor = Color.Red;        break;
@@ -53,17 +54,16 @@ namespace TabPageColoring
          }
 
          // Deal with the color
-         if (TabColors[myIndex] != Color.Transparent) newColor = Color.Transparent;
+         if (TabColors[myIndex] != defaultColor) newColor = defaultColor;
 
          TabColors.Remove  (myIndex);
          TabColors.Add     (myIndex, newColor);
 
          // To trigger the calling of the DrawItem Event Handler
-         //tabControl1.Appearance = TabAppearance.Buttons;
-         //tabControl1.Appearance = TabAppearance.Normal;
-         tabControl1.DrawMode = TabDrawMode.Normal;
-         tabControl1.DrawMode = TabDrawMode.OwnerDrawFixed;
-         //tabControl1.Update();
+         //// See a comment from June 25, 2010 here - https://stackoverflow.com/questions/3115321/tabcontrol-drawitem-not-firing-on-user-painted-tabcontrol
+         //tabControl1.DrawMode = TabDrawMode.Normal;
+         //tabControl1.DrawMode = TabDrawMode.OwnerDrawFixed;
+         tabControl1.Refresh();
         
       }
    }
