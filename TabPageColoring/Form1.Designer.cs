@@ -28,7 +28,7 @@
       /// </summary>
       private void InitializeComponent()
       {
-         this.tabControl1 = new System.Windows.Forms.TabControl();
+         this.tbc_Bottom = new System.Windows.Forms.TabControl();
          this.tabPage1 = new System.Windows.Forms.TabPage();
          this.tabPage2 = new System.Windows.Forms.TabPage();
          this.tabPage3 = new System.Windows.Forms.TabPage();
@@ -36,26 +36,26 @@
          this.cmdToggleTabPage2Color = new System.Windows.Forms.Button();
          this.cmdToggleTabPage3Color = new System.Windows.Forms.Button();
          this.colorDialog1 = new System.Windows.Forms.ColorDialog();
-         this.tabControl2 = new System.Windows.Forms.TabControl();
+         this.tbc_Top = new System.Windows.Forms.TabControl();
          this.tabPage4 = new System.Windows.Forms.TabPage();
          this.tabPage5 = new System.Windows.Forms.TabPage();
          this.tabPage6 = new System.Windows.Forms.TabPage();
-         this.tabControl1.SuspendLayout();
-         this.tabControl2.SuspendLayout();
+         this.tbc_Bottom.SuspendLayout();
+         this.tbc_Top.SuspendLayout();
          this.SuspendLayout();
          // 
-         // tabControl1
+         // tbc_Bottom
          // 
-         this.tabControl1.Controls.Add(this.tabPage1);
-         this.tabControl1.Controls.Add(this.tabPage2);
-         this.tabControl1.Controls.Add(this.tabPage3);
-         this.tabControl1.DrawMode = System.Windows.Forms.TabDrawMode.OwnerDrawFixed;
-         this.tabControl1.Location = new System.Drawing.Point(12, 286);
-         this.tabControl1.Name = "tabControl1";
-         this.tabControl1.SelectedIndex = 0;
-         this.tabControl1.Size = new System.Drawing.Size(776, 152);
-         this.tabControl1.TabIndex = 0;
-         this.tabControl1.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.tabControl1_DrawItem);
+         this.tbc_Bottom.Controls.Add(this.tabPage1);
+         this.tbc_Bottom.Controls.Add(this.tabPage2);
+         this.tbc_Bottom.Controls.Add(this.tabPage3);
+         this.tbc_Bottom.DrawMode = System.Windows.Forms.TabDrawMode.OwnerDrawFixed;
+         this.tbc_Bottom.Location = new System.Drawing.Point(12, 286);
+         this.tbc_Bottom.Name = "tbc_Bottom";
+         this.tbc_Bottom.SelectedIndex = 0;
+         this.tbc_Bottom.Size = new System.Drawing.Size(776, 152);
+         this.tbc_Bottom.TabIndex = 0;
+         this.tbc_Bottom.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.tabControl1_DrawItem);
          // 
          // tabPage1
          // 
@@ -117,16 +117,16 @@
          this.cmdToggleTabPage3Color.UseVisualStyleBackColor = true;
          this.cmdToggleTabPage3Color.Click += new System.EventHandler(this.cmdToggleTabPageColor_Click);
          // 
-         // tabControl2
+         // tbc_Top
          // 
-         this.tabControl2.Controls.Add(this.tabPage4);
-         this.tabControl2.Controls.Add(this.tabPage5);
-         this.tabControl2.Controls.Add(this.tabPage6);
-         this.tabControl2.Location = new System.Drawing.Point(16, 12);
-         this.tabControl2.Name = "tabControl2";
-         this.tabControl2.SelectedIndex = 0;
-         this.tabControl2.Size = new System.Drawing.Size(768, 187);
-         this.tabControl2.TabIndex = 4;
+         this.tbc_Top.Controls.Add(this.tabPage4);
+         this.tbc_Top.Controls.Add(this.tabPage5);
+         this.tbc_Top.Controls.Add(this.tabPage6);
+         this.tbc_Top.Location = new System.Drawing.Point(16, 12);
+         this.tbc_Top.Name = "tbc_Top";
+         this.tbc_Top.SelectedIndex = 0;
+         this.tbc_Top.Size = new System.Drawing.Size(768, 187);
+         this.tbc_Top.TabIndex = 4;
          // 
          // tabPage4
          // 
@@ -163,22 +163,22 @@
          this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
          this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
          this.ClientSize = new System.Drawing.Size(800, 450);
-         this.Controls.Add(this.tabControl2);
+         this.Controls.Add(this.tbc_Top);
          this.Controls.Add(this.cmdToggleTabPage3Color);
          this.Controls.Add(this.cmdToggleTabPage2Color);
          this.Controls.Add(this.cmdToggleTabPage1Color);
-         this.Controls.Add(this.tabControl1);
+         this.Controls.Add(this.tbc_Bottom);
          this.Name = "Form1";
          this.Text = "Form1";
-         this.tabControl1.ResumeLayout(false);
-         this.tabControl2.ResumeLayout(false);
+         this.tbc_Bottom.ResumeLayout(false);
+         this.tbc_Top.ResumeLayout(false);
          this.ResumeLayout(false);
 
       }
 
         #endregion
 
-        private System.Windows.Forms.TabControl tabControl1;
+        private System.Windows.Forms.TabControl tbc_Bottom;
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.TabPage tabPage3;
@@ -186,7 +186,7 @@
         private System.Windows.Forms.Button cmdToggleTabPage2Color;
         private System.Windows.Forms.Button cmdToggleTabPage3Color;
         private System.Windows.Forms.ColorDialog colorDialog1;
-      private System.Windows.Forms.TabControl tabControl2;
+      private System.Windows.Forms.TabControl tbc_Top;
       private System.Windows.Forms.TabPage tabPage4;
       private System.Windows.Forms.TabPage tabPage5;
       private System.Windows.Forms.TabPage tabPage6;
